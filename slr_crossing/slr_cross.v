@@ -43,7 +43,7 @@ module slr_cross #
 
    generate
       if (REGS_AFTER == 0) begin
-         always @* regs_after = d;
+         always @* regs_after = laguna_rx;
       end else begin
          always @ (posedge clk) regs_after <= sreset ? 0 : laguna_rx;
       end
